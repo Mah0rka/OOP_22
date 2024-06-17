@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_22"
         mc:Ignorable="d"
-        Title="Kovalev Vladislav OOP22" Height="450" Width="800">
+        Title="OOP22" Height="450" Width="800" Icon="/icon.jpg">
+        
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed" />
         <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed" />
