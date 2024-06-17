@@ -109,7 +109,7 @@ namespace OOP_22
             rtbEditor.SelectAll();
         }
         //реалізація кнопки для вставки зображення в файл
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_Photo_Click(object sender, RoutedEventArgs e)
         {
             // діалогове вікно для вибору файлу
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -137,6 +137,7 @@ namespace OOP_22
                 }
             }
         }
+       
         // українська
         private void Ukrainian_Click(object sender, RoutedEventArgs e)
         {
@@ -277,7 +278,5 @@ namespace OOP_22
             }
         }
 
-       
-       
     }
 }

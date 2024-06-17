@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OOP_22"
         mc:Ignorable="d"
         Title="OOP22" Height="450" Width="800" Icon="/icon.jpg">
-        
+
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed" />
         <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed" />
@@ -87,6 +87,10 @@
             <Separator />
             <ComboBox Name="cmbFontFamily" Width="150" SelectionChanged="cmbFontFamily_SelectionChanged" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
             <ComboBox Name="cmbFontSize" Width="50" IsEditable="True" TextBoxBase.TextChanged="cmbFontSize_TextChanged" VerticalAlignment="Stretch" />
+            <Separator />
+            <ToggleButton x:Name="btn_Photo" Click="btn_Photo_Click">
+                <Image Source="/photo.png" Width="26" Height="25" />
+            </ToggleButton>
             <Separator />
             <ToggleButton Command="EditingCommands.ToggleBold" x:Name="btn_C" Click="btn_C_Click">
                 <Image Source="C:\Users\koval\Downloads\OOP_22-master\Images\img2/c_icon_132529.png" Width="26" Height="25" />
