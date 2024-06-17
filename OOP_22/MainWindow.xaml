@@ -1,0 +1,96 @@
+﻿<Window x:Class="OOP_22.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_22"
+        mc:Ignorable="d"
+        Title="Kovalev Vladislav OOP22" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed" />
+        <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed" />
+        <CommandBinding Command="ApplicationCommands.Copy" Executed="Copy_Executed" />
+        <CommandBinding Command="ApplicationCommands.Paste" Executed="Paste_Executed" />
+        <CommandBinding Command="ApplicationCommands.Cut" Executed="Cut_Executed" />
+        <CommandBinding Command="ApplicationCommands.SelectAll" Executed="SelectAll_Executed" />
+    </Window.CommandBindings>
+    <DockPanel HorizontalAlignment="Right">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="File" Header="Файл">
+                <MenuItem x:Name="Open" Header="Відкрити" Command="ApplicationCommands.Open">
+
+                </MenuItem>
+                <MenuItem x:Name="SaveAs" Header="Зберегти як..." Command="ApplicationCommands.Save">
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Edit" Header="Правити">
+                <MenuItem x:Name="Copy" Header="Копіювати" Command="ApplicationCommands.Copy">
+
+                </MenuItem>
+                <MenuItem x:Name="SelectAll" Header="Вибрати все" Command="ApplicationCommands.SelectAll">
+
+                </MenuItem>
+                <MenuItem x:Name="Paste" Header="Вставити" Command="ApplicationCommands.Paste">
+
+                </MenuItem>
+                <MenuItem x:Name="Cut" Header="Вирізати" Command="ApplicationCommands.Cut">
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Language" Header="Мова">
+                <MenuItem x:Name="Ukrainian" Header="Українська" Click="Ukrainian_Click">
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\koval\Downloads\OOP_22-master\Images\img2\ukraine.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="English" Header="English" Click="English_Click">
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\koval\Downloads\OOP_22-master\Images\img2\great britain.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="French" Header="French" Click="French_Click" >
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\koval\Downloads\OOP_22-master\Images\img2\France.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top" Background="#FFDEDEDE">
+            <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold">
+                <Image Source="/Bold.png" Width="26" Height="25" />
+            </ToggleButton>
+            <ToggleButton Command="EditingCommands.ToggleItalic" Name="btnItalic">
+                <Image Source="/course.png" Width="26" Height="24" />
+            </ToggleButton>
+            <ToggleButton Command="EditingCommands.ToggleUnderline" Name="btnUnderline">
+                <Image Source="/check.png" Width="25" Height="26" />
+            </ToggleButton>
+            <Separator />
+            <ToggleButton Command="EditingCommands.AlignLeft" Name="btnLeft" Click="btnLeft_Click">
+                <Image Source="/left.png" Width="16" Height="16" />
+            </ToggleButton>
+            <ToggleButton Command="EditingCommands.AlignCenter" Name="btnCenter" Click="btnCenter_Click">
+                <Image Source="/center.png" Width="16" Height="16" />
+            </ToggleButton>
+            <ToggleButton Command="EditingCommands.AlignRight" Name="btnRight" Click="btnRight_Click">
+                <Image Source="/right.png" Width="16" Height="16" />
+            </ToggleButton>
+            <Separator />
+            <ToggleButton x:Name="btnMarkList_Copy" Click="btnMarkList_Copy_Click" >
+                <Image Source="/MARK.png" Width="30" Height="30" />
+            </ToggleButton>
+            <ToggleButton Name="btnNumList" Click="btnNumList_Click">
+                <Image Source="/num.png" Width="30" Height="30" />
+            </ToggleButton>
+            <Separator />
+            <ComboBox Name="cmbFontFamily" Width="150" SelectionChanged="cmbFontFamily_SelectionChanged" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
+            <ComboBox Name="cmbFontSize" Width="50" IsEditable="True" TextBoxBase.TextChanged="cmbFontSize_TextChanged" VerticalAlignment="Stretch" />
+            <Separator />
+            <ToggleButton Command="EditingCommands.ToggleBold" x:Name="btn_C" Click="btn_C_Click">
+                <Image Source="C:\Users\koval\Downloads\OOP_22-master\Images\img2/c_icon_132529.png" Width="26" Height="25" />
+            </ToggleButton>
+        </ToolBar>
+        <RichTextBox Name="rtbEditor" SelectionChanged="rtbEditor_SelectionChanged" />
+    </DockPanel>
+</Window>
